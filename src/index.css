@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    background-color: #0e0d0d;
+    color: #f5f5f5;
+    @apply antialiased selection:bg-lime-400 selection:text-black overflow-x-hidden min-h-screen;
+  }
+}
+
+/* Sawad Framer Glass & Bento Utilities */
+.sawad-bento {
+  background-color: #171616;
+  border: 1px solid #282626;
+  border-radius: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sawad-bento:hover {
+  border-color: #3b3838;
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.sawad-bento-highlight {
+  background: linear-gradient(135deg, #1f1d1d 0%, #171616 100%);
+  border: 1px solid rgba(197, 255, 65, 0.2);
+  border-radius: 1.5rem;
+}
+
+.sawad-bento-highlight:hover {
+  border-color: rgba(197, 255, 65, 0.4);
+  box-shadow: 0 0 25px -5px rgba(197, 255, 65, 0.15);
+}
+
+.btn-lime {
+  background-color: #c5ff41;
+  color: #0c0c0c;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-lime:hover {
+  background-color: #d4ff66;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px -4px rgba(197, 255, 65, 0.4);
+}
+
+.gradient-text-lime {
+  background: linear-gradient(135deg, #c5ff41 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-orange {
+  background: linear-gradient(135deg, #f46c38 0%, #c5ff41 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0e0d0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #282626;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b3838;
+}
